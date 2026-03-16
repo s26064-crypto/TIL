@@ -88,8 +88,6 @@ javac Hello.java
 
 Hello.class
 
-여기서 바이트코드(Bytecode)가 생성된다.
-
 컴파일 과정에서
 
 문법 오류 검사
