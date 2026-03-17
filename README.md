@@ -336,8 +336,11 @@ System.out.println(age);
 변수 이름은 숫자로 시작할 수 없다(예:1num, 1st)
 
    >그러나 숫자를 이름에 포함하는 것은 가능하다
+
 >이름에는 공백이 들어갈 수 없다
+
 >자바의 예약어를 변수 이름으로 사용할 수 없다(예:int, class, public)
+
 >변수 이름에는 영문자(a-z, a-z), 숫자(0~9), 달러 기호($), 또는 밑줄(_)만 사용할 수 있다
 
 
@@ -348,13 +351,94 @@ System.out.println(age);
 
 +,-,*,/ 와 같이 계산을 수행하는 기호를 연산자라 한다. 자바에는 다음과 같은 다양한 연산자가 있다
 
-연산자 종류
+ 1. 산술 연산자 (계산하는 거)
 
->산술 연산자 : +, -, *, /, %(나머지 연산자)
->증감(증가 및 감소) 연산자:++,--
->비교 연산자:==, !=, >, <, >=, <=
->논리 연산자:&&(AND), ||(OR), !(NOT)
->대입 연산자:=, +=, -=
+주로 숫자를 계산할때 쓰는 연산자 이다.
+
+int a = 10;
+int b = 20;
+
+System.out.println(a + b); // 30
+
+System.out.println(a - b); // -10
+
+System.out.println(a * b); // 200
+
+System.out.println(a / b); // 2 (정수 나눗셈!)
+
+System.out.println(a % b); // 0 (나머지)
 
 
+→ 포인트
 
+/는 정수끼리 하면 소수점 버림
+
+%는 나머지 구하기
+
+ 2. 증가 / 감소 연산자
+
+값을 1씩 늘리거나 줄일 때
+
+int a = 5;
+
+a++; // 6
+
+a--; // 5
+
+ 중요한 차이
+ -
+int a = 5;
+
+System.out.println(a++); // 5 (먼저 출력, notom 증가)
+
+System.out.println(++a); // 7 (먼저 증가, notom 출력)
+
+→ 기억법
+
+a++ → 나중에 증가
+
+++a → 먼저 증가
+
+ 3. 비교 연산자 (참/거짓)
+
+결과가 true / false로 나옴
+
+int a = 10;
+int b = 20;
+
+System.out.println(a == b); // false
+
+System.out.println(a != b); // true
+
+System.out.println(a > b);  // false
+
+System.out.println(a < b);  // true
+
+→ if문에서 엄청 많이 씀
+
+▣ 4. 논리 연산자
+
+(조건을 여러개 쓰거나 합칠때 사용)
+
+int age = 20;
+
+boolean hasId = true;
+
+System.out.println(age >= 19 && hasId); // true
+
+종류
+
+&& → 그리고 (AND)
+
+|| → 또는 (OR)
+
+! → 반대 (NOT)
+
+ 5. 대입 연산자
+
+(값 넣기와 축약을 같이 하는 연산자)
+int a = 10;
+
+a += 5; // a = a + 5 → 15
+a -= 3; // 12
+a *= 2; // 24
